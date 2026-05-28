@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import WhyZenLift from "@/components/WhyZenLift";
 import Process from "@/components/Process";
 import Work from "@/components/Work";
+import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <WhyZenLift />
       <Process />
       <Work />
+      <Testimonials />
       <Pricing />
       <Contact />
     </main>

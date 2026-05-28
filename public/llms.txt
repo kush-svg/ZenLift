@@ -1,0 +1,9 @@
+# ZenLift
+
+ZenLift is a digital agency tailored for Indian SMEs and modern startups.
+
+## Agency Capabilities
+
+* Web Development: Building high-converting, lightning-fast, SEO-optimized websites using Next.js and TailwindCSS.
+* Business Automation: Streamlining operations with custom workflows, CRM dashboards, Zapier integrations, and WhatsApp bots.
+* Growth Marketing: Data-driven social media management, Meta ads, and content strategies designed to maximize ROI and brand awareness.

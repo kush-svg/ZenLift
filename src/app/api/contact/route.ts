@@ -8,18 +8,18 @@ export async function POST(req: Request) {
 
     // Configure your SMTP settings here or use environment variables
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.SMTP_PORT) || 587,
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
       secure: false,
       auth: {
-        user: process.env.SMTP_USER || "your-email@gmail.com",
-        pass: process.env.SMTP_PASS || "your-app-password",
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD,
       },
     });
 
     const mailOptions = {
-      from: process.env.SMTP_USER || "your-email@gmail.com",
-      to: process.env.CONTACT_EMAIL || "your-email@gmail.com", // Your agency email
+      from: process.env.SMTP_USER,
+      to: process.env.SMTP_USER, // Your agency email
       subject: `New Lead: ${businessName} - ${service}`,
       text: `
         Name: ${name}

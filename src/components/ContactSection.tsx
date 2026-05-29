@@ -59,7 +59,7 @@ const ContactSection = () => {
             <div className={styles.channelsList}>
               {/* WhatsApp Card */}
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20scaling%20my%20business%20digital%20presence."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20scaling%20my%20business%20digital%20presence."
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.channelCard}
@@ -67,7 +67,7 @@ const ContactSection = () => {
                 <div className={styles.channelIcon}>WA</div>
                 <div>
                   <div className={styles.channelTitle}>Quick Chat</div>
-                  <div className={styles.channelValue}>+91 99999 99999</div>
+                  <div className={styles.channelValue}>+91 90791 44245</div>
                 </div>
               </a>
 
@@ -76,7 +76,7 @@ const ContactSection = () => {
                 <div className={styles.channelIcon}>@</div>
                 <div>
                   <div className={styles.channelTitle}>Email Channel</div>
-                  <div className={styles.channelValue}>hello@zenlift.in</div>
+                  <div className={styles.channelValue}>zenlift.contact@gmail.com</div>
                 </div>
               </div>
 

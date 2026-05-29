@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   ctaText = "Learn More",
   ctaUrl = "",
 }) => {
-  const whatsappNumber = "919999999999";
+  const whatsappNumber = "919079144245";
   const defaultWhatsAppMsg = encodeURIComponent(
     `Hi ZenLift, I'm interested in your product: ${title}. Could you share more details or a demo?`
   );

@@ -43,7 +43,7 @@ const RestaurantsPage = () => {
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
             <a
-              href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I%20run%20a%20restaurant%2Fcafe%20and%20want%20to%20drive%20more%20walk-ins."
+              href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I%20run%20a%20restaurant%2Fcafe%20and%20want%20to%20drive%20more%20walk-ins."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -178,7 +178,7 @@ const RestaurantsPage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Digital%20Menu%20Starter%20package%20for%20my%20cafe."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Digital%20Menu%20Starter%20package%20for%20my%20cafe."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
@@ -206,7 +206,7 @@ const RestaurantsPage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Maps%20%26%20Review%20Drive%20package%20for%20my%20cafe."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Maps%20%26%20Review%20Drive%20package%20for%20my%20cafe."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
@@ -234,7 +234,7 @@ const RestaurantsPage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Local%20Footfall%20Engine%20retainer."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Local%20Footfall%20Engine%20retainer."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"

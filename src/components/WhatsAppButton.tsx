@@ -6,7 +6,7 @@ import styles from "./WhatsAppButton.module.css";
 
 const WhatsAppButton = () => {
   const pathname = usePathname();
-  const whatsappNumber = "919999999999"; // Custom placeholder for ZenLift India
+  const whatsappNumber = "919079144245"; // ZenLift WhatsApp
 
   const getCustomMessage = () => {
     switch (pathname) {

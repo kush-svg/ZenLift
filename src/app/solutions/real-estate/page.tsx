@@ -43,7 +43,7 @@ const RealEstatePage = () => {
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
             <a
-              href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20a%20real%20estate%20broker%20and%20want%20to%20set%20up%20an%20exclusive%20lead%20funnel."
+              href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20a%20real%20estate%20broker%20and%20want%20to%20set%20up%20an%20exclusive%20lead%20funnel."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -178,7 +178,7 @@ const RealEstatePage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Digital%20Starter%20package%20for%20brokers."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Digital%20Starter%20package%20for%20brokers."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
@@ -206,7 +206,7 @@ const RealEstatePage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Brochure%20%26%20Qualifier%20Bot%20package%20for%20brokers."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Brochure%20%26%20Qualifier%20Bot%20package%20for%20brokers."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
@@ -234,7 +234,7 @@ const RealEstatePage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Project%20Launch%20Engine%20retainer."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Project%20Launch%20Engine%20retainer."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"

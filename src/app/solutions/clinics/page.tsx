@@ -43,7 +43,7 @@ const ClinicsPage = () => {
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
             <a
-              href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I%20run%20a%20clinic%20and%20want%20to%20automate%20my%20patient%20bookings."
+              href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I%20run%20a%20clinic%20and%20want%20to%20automate%20my%20patient%20bookings."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -178,7 +178,7 @@ const ClinicsPage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Digital%20Starter%20package%20for%20clinics."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Digital%20Starter%20package%20for%20clinics."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
@@ -206,7 +206,7 @@ const ClinicsPage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Lead%20Flow%20%2B%20Chatbot%20package%20for%20clinics."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Lead%20Flow%20%2B%20Chatbot%20package%20for%20clinics."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
@@ -234,7 +234,7 @@ const ClinicsPage = () => {
                 </ul>
               </div>
               <a
-                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Clinic%20Growth%20Engine%20retainer."
+                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I'm%20interested%20in%20your%20Clinic%20Growth%20Engine%20retainer."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"

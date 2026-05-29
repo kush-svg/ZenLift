@@ -31,7 +31,7 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
-  const whatsappNumber = "919999999999"; // Default ZenLift WhatsApp (placeholder, clean)
+  const whatsappNumber = "919079144245"; // Default ZenLift WhatsApp
   const defaultWhatsAppMsg = encodeURIComponent(
     "Hi ZenLift, I visited your website and would like to schedule a free 30-minute consultation for my business."
   );

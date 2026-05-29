@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const whatsappNumber = "919999999999";
+  const whatsappNumber = "919079144245";
   const defaultWhatsAppMsg = encodeURIComponent(
     "Hi ZenLift, I'm ready to take my business to the next level. Let's talk!"
   );
@@ -69,7 +69,7 @@ const Footer = () => {
             <div className={styles.socials}>
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/zenlift.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
@@ -77,9 +77,19 @@ const Footer = () => {
               >
                 IG
               </a>
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61590547858434"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+                aria-label="Facebook"
+              >
+                FB
+              </a>
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/zenlift/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
@@ -87,15 +97,15 @@ const Footer = () => {
               >
                 LN
               </a>
-              {/* WhatsApp */}
+              {/* Google Business Profile */}
               <a
-                href={whatsappUrl}
+                href="https://share.google/I1463zNIAh9GIbCX0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
-                aria-label="WhatsApp"
+                aria-label="Google Business"
               >
-                WA
+                G
               </a>
             </div>
           </div>
@@ -149,13 +159,13 @@ const Footer = () => {
                 <svg className={styles.contactIcon} viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
-                <span>hello@zenlift.in</span>
+                <span>zenlift.contact@gmail.com</span>
               </div>
               <div className={styles.contactItem}>
                 <svg className={styles.contactIcon} viewBox="0 0 24 24">
                   <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.57a1.985 1.985 0 00-2 0l-2.18 2.18c-2.82-1.43-5.13-3.74-6.56-6.56l2.18-2.18a1.99 1.99 0 00.57-3.53C7.4 3.6 7.2 2.41 7.2 1.18c0-1.1-.9-2-2-2H1.99c-1.1 0-2 .9-2 2 0 11.03 8.97 20 20 20 1.1 0 2-.9 2-2v-3.81c0-1.1-.9-2-2-2z" />
                 </svg>
-                <span>+91 99999 99999</span>
+                <span>+91 90791 44245</span>
               </div>
               <div className={styles.contactItem}>
                 <svg className={styles.contactIcon} viewBox="0 0 24 24">

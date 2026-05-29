@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /favicon.ico
+Allow: /icon-48.png
+Allow: /icon-96.png
+Allow: /icon-192.png
+Allow: /icon-512.png
+Allow: /apple-touch-icon.png
+
+Sitemap: https://www.zenlift.in/sitemap.xml

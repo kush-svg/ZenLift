@@ -2,7 +2,7 @@
 
 .card {
   position: relative;
-  background: rgba(18, 18, 18, 0.6);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 3rem;
@@ -15,14 +15,14 @@
 }
 
 .card:hover {
-  background: rgba(22, 22, 22, 0.85);
+  background: var(--card-hover-bg);
   border-color: rgba(240, 123, 0, 0.4);
   transform: translateY(-6px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px var(--primary-glow);
 }
 
 .featured {
-  background: radial-gradient(circle at top right, rgba(240, 123, 0, 0.08) 0%, rgba(18, 18, 18, 0.8) 100%);
+  background: radial-gradient(circle at top right, rgba(240, 123, 0, 0.08) 0%, var(--card-bg) 100%);
   border-color: rgba(240, 123, 0, 0.5);
   grid-column: span 2;
 }

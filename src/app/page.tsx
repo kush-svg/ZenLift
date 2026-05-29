@@ -312,7 +312,7 @@ const Homepage = () => {
       </section>
 
       {/* 4. Niche Selector Grid */}
-      <section className="section" id="solutions" style={{ background: "rgba(10, 10, 10, 0.3)" }}>
+      <section className="section" id="solutions" style={{ background: "var(--section-bg)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <span className="tagline">{t("nicheSelectorTag")}</span>
@@ -403,7 +403,7 @@ const Homepage = () => {
       </section>
 
       {/* 6. Products Preview Section */}
-      <section className="section" style={{ background: "rgba(10, 10, 10, 0.4)" }}>
+      <section className="section" style={{ background: "var(--section-bg)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <span className="tagline">{t("saasTag")}</span>

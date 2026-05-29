@@ -25,7 +25,7 @@ const TermsPage = () => {
             <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem", color: "var(--text-secondary)", lineHeight: "1.7", fontSize: "0.95rem" }}>
               
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   1. Agreement to Terms
                 </h3>
                 <p>
@@ -36,7 +36,7 @@ const TermsPage = () => {
               </div>
 
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   2. Scope of Services
                 </h3>
                 <p>
@@ -54,7 +54,7 @@ const TermsPage = () => {
               </div>
 
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   3. Client Responsibilities & Onboarding
                 </h3>
                 <p>
@@ -69,7 +69,7 @@ const TermsPage = () => {
               </div>
 
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   4. Payment Terms & Billing
                 </h3>
                 <p>
@@ -101,7 +101,7 @@ const TermsPage = () => {
               </div>
 
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   6. Limitation of Liability
                 </h3>
                 <p>

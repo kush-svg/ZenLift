@@ -58,7 +58,7 @@ const CoachingPage = () => {
       </section>
 
       {/* Stats/Proof Strip */}
-      <section style={{ background: "rgba(18, 18, 18, 0.4)", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)", padding: "2.5rem 0" }}>
+      <section style={{ background: "var(--section-bg-darker)", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)", padding: "2.5rem 0" }}>
         <div className="container" style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: "2rem" }}>
           <div style={{ textAlign: "center" }}>
             <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>{t("coachingStat1")}</div>
@@ -144,7 +144,7 @@ const CoachingPage = () => {
       </section>
 
       {/* Packages / Pricing Section */}
-      <section className="section" id="packages" style={{ background: "rgba(10, 10, 10, 0.5)" }}>
+      <section className="section" id="packages" style={{ background: "var(--section-bg)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <span className="tagline">{t("packagesTag")}</span>

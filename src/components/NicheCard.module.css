@@ -4,7 +4,7 @@
   position: relative;
   height: 320px;
   border-radius: 16px;
-  background: rgba(18, 18, 18, 0.6);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   overflow: hidden;
   display: flex;
@@ -16,7 +16,7 @@
 }
 
 .card:hover {
-  background: rgba(22, 22, 22, 0.85);
+  background: var(--card-hover-bg);
   border-color: rgba(240, 123, 0, 0.4);
   transform: translateY(-8px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px var(--primary-glow);
@@ -26,8 +26,8 @@
   width: 56px;
   height: 56px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;

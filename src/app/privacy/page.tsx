@@ -25,7 +25,7 @@ const PrivacyPage = () => {
             <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem", color: "var(--text-secondary)", lineHeight: "1.7", fontSize: "0.95rem" }}>
               
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   1. Information We Collect
                 </h3>
                 <p>
@@ -40,7 +40,7 @@ const PrivacyPage = () => {
               </div>
 
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   2. How We Use Information
                 </h3>
                 <p>
@@ -58,7 +58,7 @@ const PrivacyPage = () => {
               </div>
 
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   3. Secure Third-Party API Integrations
                 </h3>
                 <p>
@@ -72,7 +72,7 @@ const PrivacyPage = () => {
               </div>
 
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   4. Data Security Standards
                 </h3>
                 <p>
@@ -83,7 +83,7 @@ const PrivacyPage = () => {
               </div>
 
               <div>
-                <h3 style={{ color: "#FFF", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.3rem", marginBottom: "0.8rem", fontWeight: "700" }}>
                   5. Client Database Ownership
                 </h3>
                 <p>

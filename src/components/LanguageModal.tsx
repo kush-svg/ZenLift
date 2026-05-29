@@ -51,25 +51,14 @@ const LanguageModal = () => {
           transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
         }}
       >
-        {/* Animated Custom Vector Logo */}
-        <div style={{ marginBottom: "1.5rem", display: "inline-block" }}>
-          <svg
-            width="56"
-            height="56"
-            viewBox="0 0 200 200"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ display: "block", margin: "0 auto" }}
-          >
-            <rect width="200" height="200" rx="44" fill="#0D0D0D" />
-            <rect x="50" y="130" width="16" height="16" rx="4" fill="#FFFFFF" opacity="0.3" />
-            <rect x="75" y="115" width="16" height="16" rx="4" fill="#F07B00" opacity="0.6" />
-            <rect x="100" y="100" width="16" height="16" rx="4" fill="#F07B00" />
-            <path
-              d="M130 50 L85 50 L85 65 L115 65 L55 125 L65 135 L125 75 L125 105 L140 105 Z"
-              fill="#F07B00"
-            />
-          </svg>
+        <div style={{ marginBottom: "1rem", display: "inline-block" }}>
+          <img
+            src="/logo_transparent.png"
+            alt="ZenLift Logo"
+            width="140"
+            height="140"
+            style={{ display: "block", margin: "0 auto", objectFit: "contain" }}
+          />
         </div>
 
         <h2 style={{ fontSize: "1.6rem", fontWeight: "800", marginBottom: "0.5rem" }}>

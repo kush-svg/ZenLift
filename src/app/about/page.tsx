@@ -107,7 +107,7 @@ const AboutPage = () => {
       </section>
 
       {/* Our Hybrid Journey Roadmap */}
-      <section className="section" style={{ background: "rgba(10, 10, 10, 0.4)" }}>
+      <section className="section" style={{ background: "var(--section-bg)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "5rem" }}>
             <span className="tagline">{t("roadmapTag")}</span>
@@ -206,7 +206,7 @@ const AboutPage = () => {
       </section>
 
       {/* Tech Stack Subpage Content */}
-      <section className="section" style={{ background: "rgba(10, 10, 10, 0.4)" }}>
+      <section className="section" style={{ background: "var(--section-bg)" }}>
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "4rem", alignItems: "center" }}>
             <div>

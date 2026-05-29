@@ -18,7 +18,7 @@ const ContactPage = () => {
       </section>
 
       {/* Local regional maps block */}
-      <section className="section" style={{ paddingTop: "2rem", background: "rgba(10, 10, 10, 0.4)" }}>
+      <section className="section" style={{ paddingTop: "2rem", background: "var(--section-bg)" }}>
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <span className="tagline">Area of Operations</span>

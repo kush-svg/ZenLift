@@ -180,7 +180,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="section" style={{ background: "rgba(10, 10, 10, 0.4)", paddingTop: "5rem" }}>
+      <section className="section" style={{ background: "var(--section-bg)", paddingTop: "5rem" }}>
         <div className="container">
           <div
             style={{
@@ -240,7 +240,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Reusable Contact section */}
-      <section className="section" style={{ background: "rgba(8, 8, 8, 0.5)" }}>
+      <section className="section" style={{ background: "var(--section-bg-darker)" }}>
         <ContactSection />
       </section>
     </div>

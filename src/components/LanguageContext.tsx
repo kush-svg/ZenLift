@@ -95,7 +95,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         closeLanguageModal,
       }}
     >
-      <div style={{ visibility: mounted ? "visible" : "hidden" }}>{children}</div>
+      {children}
     </LanguageContext.Provider>
   );
 };

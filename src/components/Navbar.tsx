@@ -37,9 +37,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-zen-orange rounded flex items-center justify-center text-white font-heading font-bold text-xl group-hover:scale-105 transition-transform">
-              Z
-            </div>
+            <img 
+              src="/symbol_transparent.png" 
+              alt="ZenLift Logo" 
+              className="w-9 h-9 group-hover:scale-105 transition-transform object-contain"
+            />
             <span className="font-heading font-bold text-2xl tracking-tight text-zen-navy">
               ZenLift
             </span>

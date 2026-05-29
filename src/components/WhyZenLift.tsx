@@ -61,16 +61,11 @@ export default function WhyZenLift() {
             className="lg:w-1/2 relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-zen-navy to-zen-navy/80 z-10 opacity-60"></div>
-              {/* Fallback pattern since we don't have an actual image yet */}
-              <div className="absolute inset-0 bg-zen-orange flex items-center justify-center p-12">
-                <div className="w-full h-full border-4 border-white/20 rounded-xl relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-30"></div>
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-heading font-bold text-6xl opacity-20 whitespace-nowrap">
-                    ZENLIFT
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/cover.png" 
+                alt="ZenLift Brand Banner" 
+                className="w-full h-full object-cover"
+              />
               
               <div className="absolute bottom-0 left-0 right-0 p-8 z-20 bg-gradient-to-t from-zen-navy to-transparent">
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-white">

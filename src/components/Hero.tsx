@@ -17,6 +17,16 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 bg-zen-orange/10 border border-zen-orange/20 px-4 py-1.5 rounded-full text-zen-orange text-sm font-semibold mb-6"
+        >
+          <img src="/symbol_transparent.png" alt="Z" className="w-4 h-4 object-contain" />
+          <span>Outcome-Led AI Agency &amp; SaaS</span>
+        </motion.div>
+
         <h1 className="text-5xl md:text-7xl font-heading font-extrabold text-zen-navy tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
           {text.map((el, i) => (
             <motion.span

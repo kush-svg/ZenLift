@@ -8,9 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 group mb-6 inline-flex">
-              <div className="w-8 h-8 bg-zen-orange rounded flex items-center justify-center text-white font-heading font-bold text-xl">
-                Z
-              </div>
+              <img 
+                src="/symbol_transparent.png" 
+                alt="ZenLift Logo" 
+                className="w-9 h-9 object-contain"
+              />
               <span className="font-heading font-bold text-2xl tracking-tight text-white">
                 ZenLift
               </span>

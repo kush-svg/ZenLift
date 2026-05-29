@@ -39,6 +39,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        {/* Branded Slow-Motion Persistent Background */}
+        <div className="pixel-grid-bg"></div>
+        <div className="pixel-grid-overlay"></div>
+        <div className="logo-particle-container">
+          <div className="logo-particle logo-particle-1"></div>
+          <div className="logo-particle logo-particle-2"></div>
+          <div className="logo-particle logo-particle-3"></div>
+          <div className="logo-particle logo-particle-4"></div>
+        </div>
+
         <Navbar />
         <main style={{ minHeight: "calc(100vh - 80px)", paddingTop: "80px" }}>
           {children}

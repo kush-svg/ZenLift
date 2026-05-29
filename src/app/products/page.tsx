@@ -4,6 +4,7 @@ import React from "react";
 import ProductCard from "@/components/ProductCard";
 import ContactSection from "@/components/ContactSection";
 import { useLanguage } from "@/components/LanguageContext";
+import MotivationalQuote from "@/components/MotivationalQuote";
 
 const ProductsPage = () => {
   const { language, t } = useLanguage();
@@ -152,10 +153,7 @@ const ProductsPage = () => {
       {/* Hero Section */}
       <section className="section" style={{ paddingBottom: "4rem" }}>
         <div className="container" style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
-          <span className="live-indicator" style={{ marginBottom: "1.5rem" }}>
-            <span className="pulse-dot"></span>
-            {t("prodTag")}
-          </span>
+          <MotivationalQuote />
           <h1 className="text-gradient" style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }}>
             {t("prodTitle")} <br />
             <span className="text-gradient-orange">{t("prodTitleOrange")}</span>

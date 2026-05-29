@@ -6,6 +6,7 @@ import NicheCard from "@/components/NicheCard";
 import ProductCard from "@/components/ProductCard";
 import FAQ from "@/components/FAQ";
 import { useLanguage } from "@/components/LanguageContext";
+import MotivationalQuote from "@/components/MotivationalQuote";
 
 const Homepage = () => {
   const { language, t } = useLanguage();
@@ -141,11 +142,8 @@ const Homepage = () => {
       <section className="section" style={{ paddingTop: "6rem", paddingBottom: "5rem" }}>
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-            {/* Live active tag */}
-            <span className="live-indicator" style={{ marginBottom: "1.5rem" }}>
-              <span className="pulse-dot"></span>
-              {t("liveTag")}
-            </span>
+            {/* Motivational Quote */}
+            <MotivationalQuote />
 
             {/* Problem hook → Outcome promise */}
             <h1
@@ -350,9 +348,10 @@ const Homepage = () => {
           <div
             className="glass-card"
             style={{
-              padding: "4rem",
-              background: "linear-gradient(135deg, rgba(8, 8, 8, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%)",
-              borderColor: "rgba(255, 255, 255, 0.08)",
+              padding: "4rem 3rem",
+              background: "var(--card-bg)",
+              borderColor: "var(--border-color)",
+              boxShadow: "0 15px 40px rgba(0, 0, 0, 0.15), 0 0 35px var(--primary-glow)",
               textAlign: "center",
               maxWidth: "900px",
               margin: "0 auto",

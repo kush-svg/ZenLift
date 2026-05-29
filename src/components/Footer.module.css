@@ -1,16 +1,16 @@
 /* Footer CSS Module */
 
 .footer {
-  background: #050505;
+  background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
-  padding: 6rem 0 3rem 0;
+  padding: 5rem 0 3rem 0;
   position: relative;
   overflow: hidden;
 }
 
 /* Big Final CTA banner */
 .ctaBanner {
-  background: radial-gradient(circle at top right, rgba(240, 123, 0, 0.1) 0%, transparent 60%);
+  background: radial-gradient(circle at top right, rgba(240, 123, 0, 0.08) 0%, var(--card-bg) 100%);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 4rem 3rem;
@@ -20,6 +20,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 30px var(--primary-glow);
 }
 
 .ctaTextContainer {
@@ -97,10 +98,35 @@
 }
 
 .socialIcon:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background: var(--primary-glow);
   transform: translateY(-2px);
+}
+
+.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(214, 36, 159, 0.4);
+}
+
+.facebook:hover {
+  background: #1877F2;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(24, 119, 242, 0.4);
+}
+
+.linkedin:hover {
+  background: #0077B5;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(0, 119, 181, 0.4);
+}
+
+.google:hover {
+  background: #EA4335;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(234, 67, 53, 0.4);
 }
 
 .colTitle {

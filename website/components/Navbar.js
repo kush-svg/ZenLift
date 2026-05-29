@@ -85,7 +85,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className={`${styles.navItem} ${styles.dropdown}`}>
+          <li className={`${styles.navItem} styles.dropdown`}>
             <div className={`${styles.navLink} ${styles.dropdownTrigger} ${pathname.startsWith("/solutions") ? styles.activeLink : ""}`}>
               Solutions
               <svg className={styles.dropdownIcon} viewBox="0 0 24 24">

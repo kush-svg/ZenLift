@@ -1,0 +1,66 @@
+/* WhatsApp Floating Button CSS Module */
+
+.whatsappFloat {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366; /* Standout WhatsApp Green or primary ZenLift Orange, Green works best for trust in India */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.whatsappFloat:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+  background-color: #20ba5a;
+}
+
+/* Subtle continuous ripple animation */
+.whatsappFloat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: inherit;
+  opacity: 0.4;
+  z-index: -1;
+  animation: pulseRipple 2s infinite;
+}
+
+@keyframes pulseRipple {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: #FFFFFF;
+}
+
+/* Make sure it does not overlap with sitemap text or footer columns on tiny screens */
+@media (max-width: 768px) {
+  .whatsappFloat {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+}

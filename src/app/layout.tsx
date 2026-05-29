@@ -5,6 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
+import { LanguageProvider } from "@/components/LanguageContext";
+import LanguageModal from "@/components/LanguageModal";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -39,22 +42,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        {/* Branded Slow-Motion Persistent Background */}
-        <div className="pixel-grid-bg"></div>
-        <div className="pixel-grid-overlay"></div>
-        <div className="logo-particle-container">
-          <div className="logo-particle logo-particle-1"></div>
-          <div className="logo-particle logo-particle-2"></div>
-          <div className="logo-particle logo-particle-3"></div>
-          <div className="logo-particle logo-particle-4"></div>
-        </div>
+        <LanguageProvider>
+          {/* Branded Slow-Motion Persistent Background */}
+          <div className="pixel-grid-bg"></div>
+          <div className="pixel-grid-overlay"></div>
+          <div className="logo-particle-container">
+            <div className="logo-particle logo-particle-1"></div>
+            <div className="logo-particle logo-particle-2"></div>
+            <div className="logo-particle logo-particle-3"></div>
+            <div className="logo-particle logo-particle-4"></div>
+          </div>
 
-        <Navbar />
-        <main style={{ minHeight: "calc(100vh - 80px)", paddingTop: "80px" }}>
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppButton />
+          <Navbar />
+          <main style={{ minHeight: "calc(100vh - 80px)", paddingTop: "80px" }}>
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppButton />
+          <LanguageModal />
+        </LanguageProvider>
       </body>
     </html>
   );

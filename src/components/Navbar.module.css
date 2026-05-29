@@ -263,3 +263,53 @@
     display: flex;
   }
 }
+
+/* Branded Controls Toggles */
+.toggleBtn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.toggleBtn:hover {
+  border-color: var(--primary);
+  background: rgba(240, 123, 0, 0.05);
+}
+
+.toggleIcon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
+}
+
+.langSwitchBtn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  height: 38px;
+  padding: 0 0.8rem;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.langSwitchBtn:hover {
+  border-color: var(--primary);
+  background: rgba(240, 123, 0, 0.05);
+}

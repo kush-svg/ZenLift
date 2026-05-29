@@ -1,12 +1,14 @@
+"use client";
+
 import React from "react";
 import ContactSection from "@/components/ContactSection";
-
-export const metadata = {
-  title: "Exclusive Lead Funnels & Bots for Real Estate Brokers | ZenLift",
-  description: "Get exclusive property leads and qualify buyers automatically. Custom project landing pages, smart WhatsApp brochure bots, and lead trackers in Delhi NCR.",
-};
+import { useLanguage } from "@/components/LanguageContext";
+import { translations } from "@/locales/translations";
 
 const RealEstatePage = () => {
+  const { language, t } = useLanguage();
+  const tMap = translations[language] || translations["en"];
+
   return (
     <div>
       {/* Background glow fx */}
@@ -17,18 +19,17 @@ const RealEstatePage = () => {
         <div className="container" style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
           <span className="live-indicator" style={{ marginBottom: "1.5rem" }}>
             <span className="pulse-dot"></span>
-            Real Estate Growth Partner
+            {t("realestateTag")}
           </span>
           <h1 className="text-gradient" style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }}>
-            Be the first broker they call. <br />
-            <span className="text-gradient-orange">And the only one they stay with.</span>
+            {t("realestateHeroH1")} <br />
+            <span className="text-gradient-orange">{t("realestateHeroH1Orange")}</span>
           </h1>
           <p
             className="serif-font"
             style={{ fontSize: "1.4rem", color: "var(--text-secondary)", maxWidth: "700px", margin: "0 auto 2.5rem auto" }}
           >
-            "Harish Sir was buying shared leads that went to 10 other brokers.
-            We built him a single project page, giving him 15 exclusive leads, resulting in 2 closures in 30 days."
+            {t("realestateHeroQuote")}
           </p>
           <p
             style={{
@@ -38,8 +39,7 @@ const RealEstatePage = () => {
               fontSize: "1.05rem",
             }}
           >
-            We build focused, high-converting project landing pages, automated WhatsApp brochure delivery systems,
-            and smart buyer qualification bots that filter serious buyers from tire-kickers.
+            {t("realestateHeroDesc")}
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
             <a
@@ -48,10 +48,10 @@ const RealEstatePage = () => {
               rel="noopener noreferrer"
               className="btn btn-primary"
             >
-              Get Free Property Audit
+              {t("btnRealestateAudit")}
             </a>
             <a href="#packages" className="btn btn-secondary">
-              View Broker Packages
+              {t("btnRealestatePackages")}
             </a>
           </div>
         </div>
@@ -61,16 +61,16 @@ const RealEstatePage = () => {
       <section style={{ background: "rgba(18, 18, 18, 0.4)", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)", padding: "2.5rem 0" }}>
         <div className="container" style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: "2rem" }}>
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>100%</div>
-            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Exclusive Leads (No Shared Portals)</div>
+            <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>{t("realestateStat1")}</div>
+            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>{t("realestateStat1Label")}</div>
           </div>
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>30 Sec</div>
-            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Brochure Delivery Response Speed</div>
+            <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>{t("realestateStat2")}</div>
+            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>{t("realestateStat2Label")}</div>
           </div>
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>5x+</div>
-            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Site Visit Booking Efficiency</div>
+            <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>{t("realestateStat3")}</div>
+            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>{t("realestateStat3Label")}</div>
           </div>
         </div>
       </section>
@@ -79,68 +79,63 @@ const RealEstatePage = () => {
       <section className="section">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <h2 style={{ fontSize: "2.2rem", marginBottom: "1rem" }}>Bypass the portal price-war</h2>
+            <h2 style={{ fontSize: "2.2rem", marginBottom: "1rem" }}>{language === "en" ? "Bypass the portal price-war" : "पोर्टल की प्राइस-वॉर से बाहर निकलें"}</h2>
             <p style={{ color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto" }}>
-              Buying listing packages on 99acres or Housing.com sends the same buyer to 10 competing brokers.
-              Here is how we bring serious clients exclusively to you.
+              {language === "en"
+                ? "Buying listing packages on 99acres or Housing.com sends the same buyer to 10 competing brokers. Here is how we bring serious clients exclusively to you."
+                : "99acres या Housing.com जैसी साइट्स पर लिस्टिंग पैकेजेस खरीदने से एक ही बायर 10 अलग-अलग ब्रोकर्स के पास जाता है। यहाँ देखें कि हम सिर्फ आपके लिए सीरियस क्लाइंट्स कैसे लाते हैं।"}
             </p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}>
             {/* Column Pain Points */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-              <h3 style={{ fontSize: "1.3rem", color: "rgba(255, 255, 255, 0.4)", textTransform: "uppercase", letterSpacing: "0.05em" }}>The Problem</h3>
+              <h3 style={{ fontSize: "1.3rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>{t("theProblem")}</h3>
               
               <div className="glass-card" style={{ padding: "2rem", borderLeft: "4px solid rgba(220, 50, 50, 0.5)" }}>
-                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem" }}>Shared Portal Lead Races</h4>
+                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem" }}>{t("realestateProblem1")}</h4>
                 <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
-                  Listing packages sell the same lead to 10 competing brokers simultaneously. If you don't call the buyer
-                  within the first 2 minutes, you lose the deal entirely.
+                  {t("realestateProblem1Desc")}
                 </p>
               </div>
 
               <div className="glass-card" style={{ padding: "2rem", borderLeft: "4px solid rgba(220, 50, 50, 0.5)" }}>
-                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem" }}>Time-Consuming PDF Dumps</h4>
+                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem" }}>{t("realestateProblem2")}</h4>
                 <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
-                  When a buyer requests property plans or brochures, you copy-paste massive files and 30 photos manually
-                  on WhatsApp. It looks chaotic, slow, and unprofessional.
+                  {t("realestateProblem2Desc")}
                 </p>
               </div>
 
               <div className="glass-card" style={{ padding: "2rem", borderLeft: "4px solid rgba(220, 50, 50, 0.5)" }}>
-                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem" }}>Tire-Kicker Call Exhaustion</h4>
+                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem" }}>{t("realestateProblem3")}</h4>
                 <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
-                  You waste hours calling leads who are \"just browsing\" or have a budget of ₹40 Lakhs when you are selling
-                  a luxury project starting at ₹1.5 Crores.
+                  {t("realestateProblem3Desc")}
                 </p>
               </div>
             </div>
 
             {/* Column Solutions */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-              <h3 style={{ fontSize: "1.3rem", color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>The ZenLift System</h3>
+              <h3 style={{ fontSize: "1.3rem", color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>{t("theZenLiftSystem")}</h3>
 
               <div className="glass-card" style={{ padding: "2rem", borderLeft: "4px solid var(--primary)" }}>
-                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem", color: "var(--primary)" }}>Exclusive Project Funnel</h4>
+                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem", color: "var(--primary)" }}>{t("realestateSolution1")}</h4>
                 <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
-                  We build project-specific landing pages that capture exclusive buyers. When a lead submits an inquiry,
-                  it goes straight to you and nobody else.
+                  {t("realestateSolution1Desc")}
                 </p>
               </div>
 
               <div className="glass-card" style={{ padding: "2rem", borderLeft: "4px solid var(--primary)" }}>
-                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem", color: "var(--primary)" }}>Instant Brochure Delivery Bot</h4>
+                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem", color: "var(--primary)" }}>{t("realestateSolution2")}</h4>
                 <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
-                  Our system instantly delivers a clean, professional link displaying project plans, photos, and brochures
-                  the second a buyer inquires, making you look highly credible.
+                  {t("realestateSolution2Desc")}
                 </p>
               </div>
 
               <div className="glass-card" style={{ padding: "2rem", borderLeft: "4px solid var(--primary)" }}>
-                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem", color: "var(--primary)" }}>WhatsApp Intent Qualifier</h4>
+                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem", color: "var(--primary)" }}>{t("realestateSolution3")}</h4>
                 <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
-                  Before you waste time calling, our chatbot qualifies the buyer's timeline, micro-location preference, and
-                  exact budget range, logging it all in a structured CRM sheet.
+                  {t("realestateSolution3Desc")}
                 </p>
               </div>
             </div>
@@ -152,10 +147,10 @@ const RealEstatePage = () => {
       <section className="section" id="packages" style={{ background: "rgba(10, 10, 10, 0.5)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <span className="tagline">Packages Tailored for Closures</span>
-            <h2 style={{ fontSize: "2.2rem", marginTop: "0.5rem", marginBottom: "1rem" }}>Predictable broker plans</h2>
+            <span className="tagline">{t("packagesTag")}</span>
+            <h2 style={{ fontSize: "2.2rem", marginTop: "0.5rem", marginBottom: "1rem" }}>{t("packagesTitle")}</h2>
             <p style={{ color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto" }}>
-              Standard prices built for independent brokers and small agencies. A single deal pays this back 10x.
+              {t("packagesSubtitle")}
             </p>
           </div>
 
@@ -163,18 +158,16 @@ const RealEstatePage = () => {
             {/* Package 1 */}
             <div className="glass-card" style={{ padding: "3rem 2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               <div>
-                <span style={{ fontSize: "0.8rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Brand Presence</span>
-                <h3 style={{ fontSize: "1.5rem", margin: "0.5rem 0" }}>Digital Starter</h3>
-                <div style={{ fontSize: "2rem", fontWeight: "800", color: "#FFF", margin: "1rem 0" }}>₹12,000</div>
+                <span style={{ fontSize: "0.8rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>{language === "en" ? "Brand Presence" : "ब्रांड प्रेजेंस"}</span>
+                <h3 style={{ fontSize: "1.5rem", margin: "0.5rem 0" }}>{t("realestatePack1Name")}</h3>
+                <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--text-primary)", margin: "1rem 0" }}>{t("realestatePack1Price")}</div>
                 <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", marginBottom: "2rem" }}>
-                  A professional broker website to showcase your active residential/commercial listings and build trust.
+                  {t("realestatePack1Desc")}
                 </p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.8rem", color: "var(--text-secondary)", fontSize: "0.85rem", marginBottom: "2rem" }}>
-                  <li>✓ 3-Page Website (Home, Listings, Contact)</li>
-                  <li>✓ Agent profile & brokerage achievements</li>
-                  <li>✓ Google Maps office directions embed</li>
-                  <li>✓ Direct WhatsApp Click-to-Chat CTA</li>
-                  <li>✓ Google Business Profile audit</li>
+                  {tMap.realestatePack1Bullets.map((bullet: string, idx: number) => (
+                    <li key={idx}>✓ {bullet}</li>
+                  ))}
                 </ul>
               </div>
               <a
@@ -184,25 +177,23 @@ const RealEstatePage = () => {
                 className="btn btn-secondary"
                 style={{ width: "100%" }}
               >
-                Inquire
+                {t("inquireBtn")}
               </a>
             </div>
 
             {/* Package 2 */}
             <div className="glass-card" style={{ padding: "3rem 2rem", display: "flex", flexDirection: "column", justifyContent: "space-between", borderColor: "var(--primary)", background: "rgba(240, 123, 0, 0.03)" }}>
               <div>
-                <span className="live-indicator" style={{ marginBottom: "0.8rem" }}>Highest ROI</span>
-                <h3 style={{ fontSize: "1.5rem", margin: "0.5rem 0" }}>Brochure & Qualifier Bot</h3>
-                <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--primary)", margin: "1rem 0" }}>₹15,000</div>
+                <span className="live-indicator" style={{ marginBottom: "0.8rem" }}>{language === "en" ? "Highest ROI" : "हाईएस्ट ROI"}</span>
+                <h3 style={{ fontSize: "1.5rem", margin: "0.5rem 0" }}>{t("realestatePack2Name")}</h3>
+                <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--primary)", margin: "1rem 0" }}>{t("realestatePack2Price")}</div>
                 <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", marginBottom: "2rem" }}>
-                  Our automated brochure delivery and buyer qualification bot. Bypasses call fatigue and filters serious leads.
+                  {t("realestatePack2Desc")}
                 </p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.8rem", color: "var(--text-secondary)", fontSize: "0.85rem", marginBottom: "2rem" }}>
-                  <li>✓ Everything in Digital Starter</li>
-                  <li>✓ Custom PDF brochure link delivery</li>
-                  <li>✓ WhatsApp Qualification Bot</li>
-                  <li>✓ Automatic budget & timeline filters</li>
-                  <li>✓ Google Sheets broker lead log</li>
+                  {tMap.realestatePack2Bullets.map((bullet: string, idx: number) => (
+                    <li key={idx}>✓ {bullet}</li>
+                  ))}
                 </ul>
               </div>
               <a
@@ -212,25 +203,23 @@ const RealEstatePage = () => {
                 className="btn btn-primary"
                 style={{ width: "100%" }}
               >
-                Book Setup
+                {t("bookSetupBtn")}
               </a>
             </div>
 
             {/* Package 3 */}
             <div className="glass-card" style={{ padding: "3rem 2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               <div>
-                <span style={{ fontSize: "0.8rem", color: "var(--accent-gold)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Ad Campaign Retainer</span>
-                <h3 style={{ fontSize: "1.5rem", margin: "0.5rem 0" }}>Project Launch Engine</h3>
-                <div style={{ fontSize: "2rem", fontWeight: "800", color: "#FFF", margin: "1rem 0" }}>₹14,000<span style={{ fontSize: "1rem", fontWeight: "400" }}>/month</span></div>
+                <span style={{ fontSize: "0.8rem", color: "var(--accent-gold)", textTransform: "uppercase", letterSpacing: "0.05em" }}>{language === "en" ? "Ad Campaign Retainer" : "एड कैंपेन रिटेनर"}</span>
+                <h3 style={{ fontSize: "1.5rem", margin: "0.5rem 0" }}>{t("realestatePack3Name")}</h3>
+                <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--text-primary)", margin: "1rem 0" }}>{t("realestatePack3Price")}<span style={{ fontSize: "1rem", fontWeight: "400" }}>{t("realestatePack3PriceUnit")}</span></div>
                 <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", marginBottom: "2rem" }}>
-                  Ongoing Meta lead-generation ad campaign setup and optimization to drive fresh home-buyer inquiries.
+                  {t("realestatePack3Desc")}
                 </p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.8rem", color: "var(--text-secondary)", fontSize: "0.85rem", marginBottom: "2rem" }}>
-                  <li>✓ Project-focused Meta Ad campaigns</li>
-                  <li>✓ Custom listing graphics & interior edits</li>
-                  <li>✓ Weekly lead optimization audits</li>
-                  <li>✓ CRM sheet lead status weekly syncing</li>
-                  <li>✓ WhatsApp follow-up copy templates</li>
+                  {tMap.realestatePack3Bullets.map((bullet: string, idx: number) => (
+                    <li key={idx}>✓ {bullet}</li>
+                  ))}
                 </ul>
               </div>
               <a
@@ -240,7 +229,7 @@ const RealEstatePage = () => {
                 className="btn btn-secondary"
                 style={{ width: "100%" }}
               >
-                Inquire
+                {t("inquireBtn")}
               </a>
             </div>
           </div>
@@ -250,12 +239,12 @@ const RealEstatePage = () => {
             <div style={{ fontSize: "2.5rem" }}>🛡️</div>
             <div>
               <h4 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--accent-gold)", marginBottom: "0.3rem" }}>
-                100% On-Time & Functionality Guarantee
+                {t("onTimeGuaranteeTitle")}
               </h4>
               <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-                We respect your brokerage. If we do not deliver your website and booking systems
-                within the working days defined in our proposal, or if they do not perform exactly as agreed,
-                you pay nothing. We refund your advance payment in full, no questions asked.
+                {language === "en"
+                  ? "We respect your brokerage. If we do not deliver your website and booking systems within the working days defined in our proposal, or if they do not perform exactly as agreed, you pay nothing. We refund your advance payment in full, no questions asked."
+                  : "हम आपकी ब्रोकरेज का सम्मान करते हैं। यदि हम वादे के मुताबिक आपकी वेबसाइट और बुकिंग सिस्टम डिलीवर नहीं करते, या वे काम नहीं करते, तो आपको कुछ भी पे नहीं करना है। एडवांस पेमेंट 100% वापस होगी।"}
               </p>
             </div>
           </div>

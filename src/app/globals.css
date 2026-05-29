@@ -2,7 +2,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
-  /* Color Tokens - Exact ZenLift Logo Palette */
+  /* Color Tokens - DEFAULT LIGHT MODE */
+  --bg-primary: #FCFCFD;   /* Clean Warm Off-White */
+  --bg-secondary: #F2F2F6; /* Elevated Layout Grey */
+  --bg-tertiary: #EAEAEF;  /* Border / Outline Fills */
+  
+  --primary: #F07B00; /* ZenLift Brand Orange */
+  --primary-hover: #D46C00;
+  --primary-glow: rgba(240, 123, 0, 0.08);
+  
+  --accent-gold: #B8860B; /* Darker Warm Gold for Light Contrast */
+  --accent-blue: #0077EE; /* Tech Integration Blue */
+  --accent-blue-glow: rgba(0, 119, 238, 0.08);
+  
+  --text-primary: #121216;  /* High-contrast readable charcoal */
+  --text-secondary: #58586A; /* Premium slate gray */
+  --text-muted: #8E8EA8;
+  
+  --border-color: rgba(0, 0, 0, 0.05);
+  --border-focus: rgba(240, 123, 0, 0.35);
+  
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-hover-bg: #FFFFFF;
+  
+  --grid-line-color: rgba(240, 123, 0, 0.035);
+  --particle-opacity-multiplier: 0.5;
+  
+  /* Fonts */
+  --font-display: 'Outfit', 'Geist Sans', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Geist Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+}
+
+[data-theme="dark"] {
+  /* Color Tokens - DARK MODE OVERRIDES */
   --bg-primary: #0D0D0D;   /* Solid Brand Charcoal */
   --bg-secondary: #080808; /* Immersive Deep Black */
   --bg-tertiary: #141414;  /* Refined Elevation Charcoal */
@@ -25,15 +63,8 @@
   --card-bg: rgba(13, 13, 13, 0.8);
   --card-hover-bg: rgba(18, 18, 18, 0.95);
   
-  /* Fonts */
-  --font-display: 'Outfit', 'Geist Sans', sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Geist Sans', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Geist Mono', monospace;
-  
-  /* Layout */
-  --max-width: 1200px;
-  --header-height: 80px;
+  --grid-line-color: rgba(240, 123, 0, 0.015);
+  --particle-opacity-multiplier: 1;
 }
 
 /* Base Styles */
@@ -48,6 +79,7 @@ html {
   color-scheme: dark;
 }
 
+/* Body Theme Transitions */
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -57,6 +89,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 a {
@@ -307,6 +340,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Branded Slow-Motion Persistent Background System */
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
 .pixel-grid-bg {
   position: fixed;
   top: 0;
@@ -314,11 +352,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   height: 100vh;
   background-image: 
-    linear-gradient(to right, rgba(240, 123, 0, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(240, 123, 0, 0.015) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
   z-index: -2;
+  animation: gridMove 25s linear infinite;
 }
 
 .pixel-grid-overlay {
@@ -327,9 +366,10 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at 50% 50%, transparent 20%, #0d0d0d 85%);
+  background: radial-gradient(circle at 50% 50%, transparent 20%, var(--bg-primary) 85%);
   pointer-events: none;
   z-index: -1;
+  transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .logo-particle-container {
@@ -357,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 20%;
   left: 15%;
   animation-duration: 45s;
-  opacity: 0.08;
+  opacity: calc(0.08 * var(--particle-opacity-multiplier));
 }
 
 .logo-particle-2 {
@@ -366,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 25%;
   right: 12%;
   background-color: #FFFFFF;
-  opacity: 0.04;
+  opacity: calc(0.04 * var(--particle-opacity-multiplier));
   animation-duration: 55s;
   animation-delay: -12s;
 }
@@ -378,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 42%;
   animation-duration: 38s;
   animation-delay: -22s;
-  opacity: 0.06;
+  opacity: calc(0.06 * var(--particle-opacity-multiplier));
 }
 
 .logo-particle-4 {
@@ -388,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 28%;
   animation-duration: 48s;
   animation-delay: -6s;
-  opacity: 0.07;
+  opacity: calc(0.07 * var(--particle-opacity-multiplier));
 }
 
 @keyframes floatSlowly {

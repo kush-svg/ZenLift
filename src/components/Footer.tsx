@@ -1,12 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import { useLanguage } from "@/components/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   const whatsappNumber = "919079144245";
   const defaultWhatsAppMsg = encodeURIComponent(
-    "Hi ZenLift, I'm ready to take my business to the next level. Let's talk!"
+    t("waMsgDefault")
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${defaultWhatsAppMsg}`;
 
@@ -16,10 +20,9 @@ const Footer = () => {
         {/* Giant banner CTA */}
         <div className={styles.ctaBanner}>
           <div className={styles.ctaTextContainer}>
-            <h3 className={styles.ctaTitle}>Let's build something extraordinary</h3>
+            <h3 className={styles.ctaTitle}>{t("footerCtaTitle")}</h3>
             <p className={styles.ctaDesc}>
-              Stop losing customers to a weak online presence. We set up high-converting AI-powered
-              systems for your local business.
+              {t("footerCtaDesc")}
             </p>
           </div>
           <div className={styles.ctaActions}>
@@ -29,10 +32,10 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="btn btn-primary"
             >
-              Get Started
+              {t("getStarted")}
             </a>
             <Link href="/contact" className="btn btn-secondary">
-              Contact Us
+              {t("navContact")}
             </Link>
           </div>
         </div>
@@ -63,8 +66,7 @@ const Footer = () => {
               </span>
             </div>
             <p className={styles.brandDesc}>
-              We build custom AI websites, smart inquiry chatbots, and automated workflows that help
-              local businesses in Delhi NCR and Faridabad capture leads and double their revenue.
+              {t("footerDesc")}
             </p>
             <div className={styles.socials}>
               {/* Instagram */}
@@ -112,48 +114,48 @@ const Footer = () => {
 
           {/* Solutions Column */}
           <div>
-            <h4 className={styles.colTitle}>Solutions</h4>
+            <h4 className={styles.colTitle}>{t("navSolutions")}</h4>
             <ul className={styles.linksList}>
               <li className={styles.linkItem}>
-                <Link href="/solutions/clinics">Medical Clinics</Link>
+                <Link href="/solutions/clinics">{t("clinicTag")}</Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/solutions/coaching">Coaching Centers</Link>
+                <Link href="/solutions/coaching">{t("coachingTag")}</Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/solutions/fitness">Gyms & Fitness</Link>
+                <Link href="/solutions/fitness">{t("fitnessTag")}</Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/solutions/restaurants">Restaurants & Cafes</Link>
+                <Link href="/solutions/restaurants">{t("restaurantTag")}</Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/solutions/real-estate">Real Estate Brokers</Link>
+                <Link href="/solutions/real-estate">{t("realestateTag")}</Link>
               </li>
             </ul>
           </div>
 
           {/* Company Column */}
           <div>
-            <h4 className={styles.colTitle}>Company</h4>
+            <h4 className={styles.colTitle}>ZenLift</h4>
             <ul className={styles.linksList}>
               <li className={styles.linkItem}>
-                <Link href="/">Home</Link>
+                <Link href="/">{t("navHome")}</Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/products">SaaS Products</Link>
+                <Link href="/products">{t("navProducts")}</Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/about">About Team</Link>
+                <Link href="/about">{t("navAbout")}</Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/contact">Get in Touch</Link>
+                <Link href="/contact">{t("navContact")}</Link>
               </li>
             </ul>
           </div>
 
           {/* Contact Details */}
           <div>
-            <h4 className={styles.colTitle}>Contact</h4>
+            <h4 className={styles.colTitle}>{t("navContact")}</h4>
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
                 <svg className={styles.contactIcon} viewBox="0 0 24 24">
@@ -176,7 +178,7 @@ const Footer = () => {
               <div className={styles.contactItem} style={{ marginTop: "0.5rem" }}>
                 <span className="live-indicator">
                   <span className="pulse-dot"></span>
-                  Active Operations
+                  {t("activeOps")}
                 </span>
               </div>
             </div>
@@ -185,10 +187,10 @@ const Footer = () => {
 
         {/* Bottom copyright row */}
         <div className={styles.bottomRow}>
-          <p>© {currentYear} ZenLift Agency. All rights reserved.</p>
+          <p>© {currentYear} ZenLift Agency. {t("allRightsReserved")}</p>
           <div className={styles.bottomLinks}>
-            <Link href="/terms">Terms of Service</Link>
-            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">{t("terms")}</Link>
+            <Link href="/privacy">{t("privacy")}</Link>
           </div>
         </div>
 

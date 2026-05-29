@@ -1,14 +1,14 @@
+"use client";
+
 import React from "react";
 import ProductCard from "@/components/ProductCard";
 import ContactSection from "@/components/ContactSection";
-
-export const metadata = {
-  title: "Bespoke SaaS Products & Software for Local Businesses | ZenLift",
-  description: "Explore our lightweight, high-performance software suite. Custom POS systems, academy managers, and lead pipelines designed for Faridabad & Delhi NCR.",
-};
+import { useLanguage } from "@/components/LanguageContext";
 
 const ProductsPage = () => {
-  const productList = [
+  const { language, t } = useLanguage();
+
+  const productList = language === "en" ? [
     {
       title: "WhypaperBill",
       description: "A super-fast, offline-capable POS and Billing system built specifically for retail and local brick-and-mortar stores in India. Simplifies inventory, gst invoices, and daily registers.",
@@ -75,6 +75,73 @@ const ProductsPage = () => {
       isFeatured: false,
       isComingSoon: true,
     },
+  ] : [
+    {
+      title: "WhypaperBill",
+      description: "एक सुपर-फ़ास्ट, ऑफ़लाइन-कैपेबल POS और बिलिंग सिस्टम जो खास तौर पर भारत के रिटेल और लोकल स्टोर्स के लिए बना है। यह आपकी इन्वेंटरी, GST इनवॉइस और डेली रजिस्टर आसान बनाता है।",
+      features: [
+        "बिजली की तरह तेज़ इनवॉइस प्रिंटिंग",
+        "SMS और WhatsApp पर बिल भेजें",
+        "GST और नॉन-GST ऑप्शंस",
+        "ऑफलाइन-फर्स्ट लोकल डेटाबेस",
+        "E-way बिलिंग इंटीग्रेशन",
+        "डेली ऑटोमेटेड सेल्स रजिस्टर",
+      ],
+      isFeatured: true,
+      isComingSoon: false,
+    },
+    {
+      title: "TutorPlus",
+      description: "ऑटोमेटेड स्टूडेंट शेड्यूलिंग और एडमिशन्स मैनेजर। यह डेमो-क्लास रिजर्वेशन, बैच शेड्यूलिंग, फीस ट्रैकिंग और पेरेंट्स के साथ कम्यूनिकेशन को आसान बनाता है।",
+      features: [
+        "डेमो-क्लास रजिस्ट्रेशन शीट्स",
+        "ऑटोमेटेड WhatsApp पेरेंट नोटिफिकेशन्स",
+        "बैच शेड्यूलिंग और अलर्ट्स",
+        "फीस कलेक्शन और पेमेंट लिस्ट्स",
+        "ऑफलाइन स्टूडेंट डेटाबेस लॉग्स",
+      ],
+      isFeatured: false,
+      isComingSoon: true,
+    },
+    {
+      title: "ZenDesk CRM",
+      description: "लोकल सर्विस बिज़नेसेज (जैसे डेंटिस्ट, सलून्स, ब्रोकर्स) के लिए एक बेहद आसान कस्टमर और पाइपलाइन मैनेजर। लीड्स ट्रैक करें, एक्टिव कॉन्ट्रैक्ट्स मैनेज करें और फॉलो-अप लॉग्स बनाएं।",
+      features: [
+        "विजुअल डील स्टेटस पाइपलाइन बोर्ड",
+        "एक क्लिक में कोट और इनवॉइस जनरेटर",
+        "WhatsApp फॉलो-अप रिमाइंडर्स",
+        "क्लाइंट लॉग्स और सर्विस हिस्ट्री",
+        "ऑटोमेटेड रिव्यु रिक्वेस्ट्स",
+      ],
+      isFeatured: false,
+      isComingSoon: true,
+    },
+    {
+      title: "LeadPulse",
+      description: "एक AI-संचालित सेंट्रल लीड डैशबोर्ड जो आपके Google Business Profile इनक्वायरी, वेबसाइट फॉर्म सबमिशन और ad campaigns के रिस्पॉन्स को एक ही स्क्रीन पर दिखाता है।",
+      features: [
+        "एकीकृत मल्टी-चैनल लीड फ़ीड",
+        "गूगल मैप्स इनक्वायरी ट्रैकिंग",
+        "कैंपेन कॉस्ट-पर-लीड एनालिसिस",
+        "रिसेप्शनिस्ट रिस्पॉन्स टाइम ऑडिट",
+        "वीकली परफॉर्मेंस समरी",
+      ],
+      isFeatured: false,
+      isComingSoon: true,
+    },
+    {
+      title: "ChatFlow Panel",
+      description: "एक साधारण और आसान चैटबॉट डिज़ाइनर जो लोकल बिज़नेस मालिकों को अपने FAQ ट्रिगर्स, वेबसाइट ग्रीटिंग्स और WhatsApp चैटबॉट के जवाबों को कस्टमाइज करने में मदद करता है।",
+      features: [
+        "ड्रैग-एंड-ड्रॉप FAQ डिज़ाइनर",
+        "WhatsApp बिज़नेस API इंटीग्रेशन",
+        "स्मार्ट इंटेंट केटेगरी",
+        "लीड हैंडऑफ नोटिफिकेशन्स",
+        "इंस्टेंट चैटबॉट एनालिटिक्स लॉग्स",
+      ],
+      isFeatured: false,
+      isComingSoon: true,
+    },
   ];
 
   return (
@@ -87,18 +154,17 @@ const ProductsPage = () => {
         <div className="container" style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
           <span className="live-indicator" style={{ marginBottom: "1.5rem" }}>
             <span className="pulse-dot"></span>
-            ZenLift Software Suite
+            {t("prodTag")}
           </span>
           <h1 className="text-gradient" style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }}>
-            Systems that power <br />
-            <span className="text-gradient-orange">local businesses.</span>
+            {t("prodTitle")} <br />
+            <span className="text-gradient-orange">{t("prodTitleOrange")}</span>
           </h1>
           <p
             className="serif-font"
             style={{ fontSize: "1.4rem", color: "var(--text-secondary)", maxWidth: "700px", margin: "0 auto 2.5rem auto" }}
           >
-            "We observe what agency tasks we repeat manually for our clients, and package those exact
-            workflows into lightweight software products."
+            {t("prodQuote")}
           </p>
           <p
             style={{
@@ -108,8 +174,7 @@ const ProductsPage = () => {
               fontSize: "1.05rem",
             }}
           >
-            No heavy enterprise software. No bloated dashboards. Just simple, highly practical local tools
-            designed to help you print bills, register students, and track leads easily.
+            {t("prodDesc")}
           </p>
         </div>
       </section>
@@ -154,15 +219,13 @@ const ProductsPage = () => {
             }}
           >
             <span className="tagline" style={{ color: "var(--accent-gold)" }}>
-              Custom Development
+              {t("customDevTag")}
             </span>
             <h2 style={{ fontSize: "2.4rem", marginTop: "0.5rem", marginBottom: "1rem" }}>
-              Need a completely bespoke software?
+              {t("customDevTitle")}
             </h2>
             <p style={{ color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto 2.5rem auto", fontSize: "0.95rem" }}>
-              Do you have a unique operation workflow that standard software doesn't cover?
-              Our co-founding engineers design and build custom web dashboards, API pipelines, and specialized automation
-              for regional local businesses.
+              {t("customDevDesc")}
             </p>
             <a
               href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I%20have%20a%20custom%20software%20requirement%20for%20my%20business."
@@ -170,7 +233,7 @@ const ProductsPage = () => {
               rel="noopener noreferrer"
               className="btn btn-primary"
             >
-              Consult an Engineer
+              {t("consultEngineer")}
             </a>
           </div>
         </div>

@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import styles from "./ContactSection.module.css";
+import { useLanguage } from "./LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -49,11 +51,10 @@ const ContactSection = () => {
         <div className={styles.grid}>
           {/* Left Details Column */}
           <div className={styles.infoCol}>
-            <span className={styles.tagline}>Get In Touch</span>
-            <h2 className={styles.title}>Let's scale your local operations</h2>
+            <span className={styles.tagline}>{t("getInTouch")}</span>
+            <h2 className={styles.title}>{t("contactTitle")}</h2>
             <p className={styles.description}>
-              Have questions about setting up a custom website or inquiry chatbot? Fill out the form
-              and our co-founding team will review your business and contact you in under 4 hours.
+              {t("contactDesc")}
             </p>
 
             <div className={styles.channelsList}>
@@ -66,7 +67,7 @@ const ContactSection = () => {
               >
                 <div className={styles.channelIcon}>WA</div>
                 <div>
-                  <div className={styles.channelTitle}>Quick Chat</div>
+                  <div className={styles.channelTitle}>{t("quickChat")}</div>
                   <div className={styles.channelValue}>+91 90791 44245</div>
                 </div>
               </a>
@@ -75,7 +76,7 @@ const ContactSection = () => {
               <div className={styles.channelCard}>
                 <div className={styles.channelIcon}>@</div>
                 <div>
-                  <div className={styles.channelTitle}>Email Channel</div>
+                  <div className={styles.channelTitle}>{t("emailChannel")}</div>
                   <div className={styles.channelValue}>zenlift.contact@gmail.com</div>
                 </div>
               </div>
@@ -84,7 +85,7 @@ const ContactSection = () => {
               <div className={styles.channelCard}>
                 <div className={styles.channelIcon}>LOC</div>
                 <div>
-                  <div className={styles.channelTitle}>Main Office</div>
+                  <div className={styles.channelTitle}>{t("mainOffice")}</div>
                   <div className={styles.channelValue}>Faridabad, Delhi NCR, India</div>
                 </div>
               </div>
@@ -96,28 +97,26 @@ const ContactSection = () => {
             {success ? (
               <div className={styles.successContainer}>
                 <div className={styles.successIcon}>✓</div>
-                <h3 className={styles.successTitle}>Inquiry Submitted</h3>
+                <h3 className={styles.successTitle}>{t("successSubmitted")}</h3>
                 <p className={styles.successMessage}>
-                  Thank you! We have successfully received your information. A co-founder from the
-                  ZenLift team will review your business presence and reach out to you via WhatsApp
-                  or phone in under 4 hours.
+                  {t("successMsg")}
                 </p>
                 <button className="btn btn-secondary" style={{ marginTop: "1rem" }} onClick={() => setSuccess(false)}>
-                  Submit Another Inquiry
+                  {t("submitAnother")}
                 </button>
               </div>
             ) : (
               <form className={styles.form} onSubmit={handleSubmit}>
                 <div className={styles.formGroup}>
                   <label htmlFor="name" className={styles.label}>
-                    Your Name
+                    {t("labelName")}
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     required
-                    placeholder="Enter your full name"
+                    placeholder={t("placeholderName")}
                     value={formData.name}
                     onChange={handleChange}
                     className={styles.input}
@@ -127,14 +126,14 @@ const ContactSection = () => {
                 <div className={styles.gridFormRow} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                   <div className={styles.formGroup}>
                     <label htmlFor="phone" className={styles.label}>
-                      Phone / WhatsApp
+                      {t("labelPhone")}
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       required
-                      placeholder="e.g. +91 98765 43210"
+                      placeholder={t("placeholderPhone")}
                       value={formData.phone}
                       onChange={handleChange}
                       className={styles.input}
@@ -143,14 +142,14 @@ const ContactSection = () => {
 
                   <div className={styles.formGroup}>
                     <label htmlFor="email" className={styles.label}>
-                      Email Address
+                      {t("labelEmail")}
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       required
-                      placeholder="e.g. name@company.com"
+                      placeholder={t("placeholderEmail")}
                       value={formData.email}
                       onChange={handleChange}
                       className={styles.input}
@@ -160,7 +159,7 @@ const ContactSection = () => {
 
                 <div className={styles.formGroup}>
                   <label htmlFor="businessType" className={styles.label}>
-                    Business Industry
+                    {t("labelIndustry")}
                   </label>
                   <select
                     id="businessType"
@@ -169,24 +168,24 @@ const ContactSection = () => {
                     onChange={handleChange}
                     className={styles.select}
                   >
-                    <option value="Dental / Clinic">Medical Clinic / Dentist / Physio</option>
-                    <option value="Coaching / Tuition">Coaching Institute / Tuition Center</option>
-                    <option value="Gym / Fitness">Gym / Fitness Studio / Yoga</option>
-                    <option value="Cafe / Restaurant">Restaurant / Café / Cloud Kitchen</option>
-                    <option value="Real Estate Broker">Real Estate Broker / Property Agency</option>
-                    <option value="Other">Other / Custom Enterprise</option>
+                    <option value="Dental / Clinic">{t("optClinic")}</option>
+                    <option value="Coaching / Tuition">{t("optCoaching")}</option>
+                    <option value="Gym / Fitness">{t("optFitness")}</option>
+                    <option value="Cafe / Restaurant">{t("optRestaurant")}</option>
+                    <option value="Real Estate Broker">{t("optBroker")}</option>
+                    <option value="Other">{t("optOther")}</option>
                   </select>
                 </div>
 
                 <div className={styles.formGroup}>
                   <label htmlFor="message" className={styles.label}>
-                    Tell us about your business goals
+                    {t("labelMessage")}
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
-                    placeholder="e.g., I want to set up an automated demo-class registration sheet and a course website."
+                    placeholder={t("placeholderMessage")}
                     value={formData.message}
                     onChange={handleChange}
                     className={styles.textarea}
@@ -199,7 +198,7 @@ const ContactSection = () => {
                   className="btn btn-primary"
                   style={{ width: "100%", padding: "1rem" }}
                 >
-                  {loading ? "Submitting Inquiry..." : "Submit Digital Consultation Request"}
+                  {loading ? t("btnSubmitting") : t("btnSubmitInquiry")}
                 </button>
               </form>
             )}

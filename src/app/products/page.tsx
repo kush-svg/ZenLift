@@ -23,6 +23,7 @@ const ProductsPage = () => {
       ],
       isFeatured: true,
       isComingSoon: false,
+      ctaUrl: "/products/whypaperbill",
     },
     {
       title: "TutorPlus",
@@ -35,7 +36,8 @@ const ProductsPage = () => {
         "Offline student database logs",
       ],
       isFeatured: false,
-      isComingSoon: true,
+      isComingSoon: false,
+      ctaUrl: "/products/tutorplus",
     },
     {
       title: "ZenDesk CRM",
@@ -48,7 +50,8 @@ const ProductsPage = () => {
         "Automated review requests",
       ],
       isFeatured: false,
-      isComingSoon: true,
+      isComingSoon: false,
+      ctaUrl: "/products/zendesk-crm",
     },
     {
       title: "LeadPulse",
@@ -61,7 +64,8 @@ const ProductsPage = () => {
         "Weekly performance digests",
       ],
       isFeatured: false,
-      isComingSoon: true,
+      isComingSoon: false,
+      ctaUrl: "/products/leadpulse",
     },
     {
       title: "ChatFlow Panel",
@@ -74,7 +78,8 @@ const ProductsPage = () => {
         "Instant chatbot analytics logs",
       ],
       isFeatured: false,
-      isComingSoon: true,
+      isComingSoon: false,
+      ctaUrl: "/products/chatflow",
     },
   ] : [
     {
@@ -90,6 +95,7 @@ const ProductsPage = () => {
       ],
       isFeatured: true,
       isComingSoon: false,
+      ctaUrl: "/products/whypaperbill",
     },
     {
       title: "TutorPlus",
@@ -102,7 +108,8 @@ const ProductsPage = () => {
         "ऑफलाइन स्टूडेंट डेटाबेस लॉग्स",
       ],
       isFeatured: false,
-      isComingSoon: true,
+      isComingSoon: false,
+      ctaUrl: "/products/tutorplus",
     },
     {
       title: "ZenDesk CRM",
@@ -115,7 +122,8 @@ const ProductsPage = () => {
         "ऑटोमेटेड रिव्यु रिक्वेस्ट्स",
       ],
       isFeatured: false,
-      isComingSoon: true,
+      isComingSoon: false,
+      ctaUrl: "/products/zendesk-crm",
     },
     {
       title: "LeadPulse",
@@ -128,7 +136,8 @@ const ProductsPage = () => {
         "वीकली परफॉर्मेंस समरी",
       ],
       isFeatured: false,
-      isComingSoon: true,
+      isComingSoon: false,
+      ctaUrl: "/products/leadpulse",
     },
     {
       title: "ChatFlow Panel",
@@ -141,7 +150,8 @@ const ProductsPage = () => {
         "इंस्टेंट चैटबॉट एनालिटिक्स लॉग्स",
       ],
       isFeatured: false,
-      isComingSoon: true,
+      isComingSoon: false,
+      ctaUrl: "/products/chatflow",
     },
   ];
 
@@ -195,6 +205,7 @@ const ProductsPage = () => {
                 features={product.features}
                 isFeatured={product.isFeatured}
                 isComingSoon={product.isComingSoon}
+                ctaUrl={product.ctaUrl}
               />
             ))}
           </div>

@@ -54,13 +54,13 @@ const DotCorridorBg = () => {
 
     // 3D Corridor Variables
     const corridorHeight = 350; // Distance of ceiling and floor from center
-    const corridorWidth = 1000;   // Span in X direction
+    const corridorWidth = 4000;   // Span in X direction (stretched very wide horizontally!)
     const corridorLength = 1500;  // Span in Z direction (infinite loop depth)
     const focalLength = 400;      // Focal length for perspective projection
 
     // Grid details
     const numRows = 16;           // Number of steps along Z
-    const numCols = 15;           // Number of lines along X
+    const numCols = 41;           // Number of lines along X (increased for wide span)
     const rowSpacing = corridorLength / numRows;
     const colSpacing = corridorWidth / (numCols - 1);
 
@@ -69,7 +69,7 @@ const DotCorridorBg = () => {
       x: number;
       y: number;
       z: number;
-      colorType: "base" | "primary" | "gold"; // For beautiful branded color mixing
+      colorType: "base" | "primary"; // Cleaned up (35% orange / 65% base)
     }
 
     const points: Point3D[] = [];
@@ -80,16 +80,13 @@ const DotCorridorBg = () => {
       
       for (let c = 0; c < numCols; c++) {
         // Skip the middle columns to create a symmetrical center walkway gap
-        if (c >= 6 && c <= 8) continue;
+        if (c >= 18 && c <= 22) continue;
         const x = (c * colSpacing) - (corridorWidth / 2);
         
-        // Randomly assign colors to some dots to match premium brand vibes
-        let colorType: "base" | "primary" | "gold" = "base";
-        const rand = Math.random();
-        if (rand < 0.08) {
+        // 35% orange (primary) and 65% base (black/white depending on theme)
+        let colorType: "base" | "primary" = "base";
+        if (Math.random() < 0.35) {
           colorType = "primary";
-        } else if (rand < 0.14) {
-          colorType = "gold";
         }
 
         // Ceiling dot
@@ -169,8 +166,8 @@ const DotCorridorBg = () => {
         // Skip drawing if outside the viewport boundaries to save cycles
         if (px < -50 || px > width + 50 || py < -50 || py > height + 50) return;
 
-        // Radius based on perspective (further = smaller)
-        const baseRadius = pt.colorType === "base" ? 3.0 : 4.5;
+        // Radius based on perspective (further = smaller) - slightly larger hollow bubbles
+        const baseRadius = pt.colorType === "base" ? 4.5 : 6.0;
         const radius = (baseRadius * focalLength) / relativeZ;
 
         // Opacity mapping (further = fades to vanishing point, extremely close = fades out)
@@ -190,22 +187,22 @@ const DotCorridorBg = () => {
         let color = dotBaseColor;
         if (pt.colorType === "primary") {
           color = primaryColor;
-        } else if (pt.colorType === "gold") {
-          color = goldColor;
         }
 
-        // Draw dot with premium radial glows for colored dots
+        // Draw hollow bubble (ring) with stroke instead of solid fill
         ctx.beginPath();
         ctx.arc(px, py, radius, 0, Math.PI * 2);
-        ctx.fillStyle = parseToRgba(color, opacity);
-        ctx.fill();
+        ctx.strokeStyle = parseToRgba(color, opacity);
+        ctx.lineWidth = Math.max(0.8, 1.5 * (focalLength / relativeZ));
+        ctx.stroke();
 
         // Extra premium soft glow for brand color highlights
-        if (pt.colorType !== "base" && relativeZ < 600) {
+        if (pt.colorType === "primary" && relativeZ < 600) {
           ctx.beginPath();
-          ctx.arc(px, py, radius * 3.5, 0, Math.PI * 2);
-          ctx.fillStyle = parseToRgba(color, opacity * 0.25);
-          ctx.fill();
+          ctx.arc(px, py, radius * 2.5, 0, Math.PI * 2);
+          ctx.strokeStyle = parseToRgba(color, opacity * 0.12);
+          ctx.lineWidth = 1.0;
+          ctx.stroke();
         }
       });
 

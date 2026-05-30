@@ -70,7 +70,24 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
       {/* Button CTA Actions */}
       <div className={styles.actions}>
-        {isComingSoon ? (
+        {ctaUrl.startsWith("/products/") ? (
+          <>
+            <Link href={ctaUrl} className="btn btn-primary" style={{ display: "block", textAlign: "center" }}>
+              Launch Interactive Demo
+            </Link>
+            <a
+              href={`https://wa.me/919079144245?text=${encodeURIComponent(
+                `Hi ZenLift, I'm interested in your product: ${title}. Could you share more details or a custom quote?`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+              style={{ display: "block", textAlign: "center" }}
+            >
+              Inquire on WhatsApp
+            </a>
+          </>
+        ) : isComingSoon ? (
           <a
             href={whatsappUrl}
             target="_blank"

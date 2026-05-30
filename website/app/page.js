@@ -1,17 +1,16 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import NicheCard from "@/components/NicheCard";
 import ProductCard from "@/components/ProductCard";
 import FAQ from "@/components/FAQ";
-import { useLanguage } from "@/components/LanguageContext";
-import MotivationalQuote from "@/components/MotivationalQuote";
+
+export const metadata = {
+  title: "ZenLift | AI-Powered Web Systems & Automation for Local Businesses",
+  description: "We build custom websites, smart inquiry chatbots, and automated workflows that double revenue for local businesses in Faridabad & Delhi NCR.",
+};
 
 const Homepage = () => {
-  const { language, t } = useLanguage();
-
-  const niches = language === "en" ? [
+  const niches = [
     {
       title: "Medical Clinics",
       description: "For Dentists, Physios & GPs. Streamline booking, handle routine questions, and automate 5-star Google review requests.",
@@ -42,40 +41,9 @@ const Homepage = () => {
       icon: "real-estate",
       path: "/solutions/real-estate",
     },
-  ] : [
-    {
-      title: "Medical Clinics",
-      description: "डेंटिस्ट, फिजियो और GPs के लिए। बुकिंग आसान बनाएं, रोज़मर्रा के सवालों के जवाब दें और 5-स्टार गूगल रिव्यूज ऑटोमैटिकली पाएं।",
-      icon: "clinic",
-      path: "/solutions/clinics",
-    },
-    {
-      title: "Coaching Centers",
-      description: "ट्यूशन और एकेडेमीज़ के लिए। स्टूडेंट लीड्स कैप्चर करें, WhatsApp पर बैच कन्फर्मेशन ऑटोमेट करें और डेमो क्लास अटेंडेंस डबल करें।",
-      icon: "coaching",
-      path: "/solutions/coaching",
-    },
-    {
-      title: "Fitness & Gyms",
-      description: "जिम्स और योग स्टूडियोज के लिए। फ्री-ट्रायल बुकिंग फनल्स शुरू करें, 24/7 तुरंत जवाब दें और मेंबर कन्वर्शन रेट्स ट्रैक करें।",
-      icon: "fitness",
-      path: "/solutions/fitness",
-    },
-    {
-      title: "Restaurants & Cafes",
-      description: "कैफ़े और डाइन-इन्स के लिए। लोकल फुटफॉल बढ़ाएं, गूगल मैप्स विजिबिलिटी को बेहतर करें और बिना Zomato कमीशन के सीधे ऑर्डर्स पाएं।",
-      icon: "restaurant",
-      path: "/solutions/restaurants",
-    },
-    {
-      title: "Real Estate Brokers",
-      description: "प्रॉपर्टी कंसलटेंट्स के लिए। प्रोजेक्ट-फोकस्ड लैंडिंग पेजेस बनाएं, WhatsApp पर बायर्स को क्वालीफाई करें और ब्रोशर ऑटोमैटिकली शेयर करें।",
-      icon: "real-estate",
-      path: "/solutions/real-estate",
-    },
   ];
 
-  const products = language === "en" ? [
+  const products = [
     {
       title: "WhypaperBill",
       description: "A super-fast, offline-capable POS and Billing system built specifically for retail and local brick-and-mortar stores in India. Simplifies inventory, gst invoices, and daily registers.",
@@ -103,34 +71,6 @@ const Homepage = () => {
       isFeatured: false,
       isComingSoon: true,
     },
-  ] : [
-    {
-      title: "WhypaperBill",
-      description: "एक सुपर-फ़ास्ट, ऑफलाइन-कैपेबल POS और बिलिंग सिस्टम जो खास तौर पर भारत के रिटेल और लोकल स्टोर्स के लिए बना है। इन्वेंटरी, GST इनवॉइस और डेली रजिस्टर आसान बनाएं।",
-      features: [
-        "बिजली की तरह तेज़ इनवॉइस प्रिंट",
-        "SMS/WhatsApp पर बिल भेजें",
-        "GST और नॉन-GST ऑप्शंस",
-        "ऑफलाइन-फर्स्ट लोकल डेटाबेस",
-        "E-way बिलिंग इंटीग्रेशन",
-      ],
-      isFeatured: true,
-      isComingSoon: false,
-    },
-    {
-      title: "TutorPlus",
-      description: "ऑटोमेटेड स्टूडेंट शेड्यूलिंग और एडमिशन्स मैनेजर।",
-      features: ["डेमो-क्लास पाइपलाइन", "पेरेंट्स को ऑटो WhatsApp", "फीस कलेक्शन लिस्ट्स"],
-      isFeatured: false,
-      isComingSoon: true,
-    },
-    {
-      title: "ZenDesk CRM",
-      description: "सर्विस बिज़नेसेज के लिए एक आसान कस्टमर और पाइपलाइन बोर्ड।",
-      features: ["लीड स्टेटस पाइपलाइन", "ऑटो कोट जनरेटर", "पेमेंट रिमाइंडर्स"],
-      isFeatured: false,
-      isComingSoon: true,
-    },
   ];
 
   return (
@@ -142,8 +82,11 @@ const Homepage = () => {
       <section className="section" style={{ paddingTop: "6rem", paddingBottom: "5rem" }}>
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-            {/* Motivational Quote */}
-            <MotivationalQuote />
+            {/* Live active tag */}
+            <span className="live-indicator" style={{ marginBottom: "1.5rem" }}>
+              <span className="pulse-dot"></span>
+              ZenLift 2.0 Is Live
+            </span>
 
             {/* Problem hook → Outcome promise */}
             <h1
@@ -156,8 +99,8 @@ const Homepage = () => {
                 letterSpacing: "-0.03em",
               }}
             >
-              {t("heroTitle")} <br />
-              <span className="text-gradient-orange">{t("heroTitleGradient")}</span>
+              Stop losing customers to a <br />
+              <span className="text-gradient-orange">weak online presence.</span>
             </h1>
 
             <p
@@ -169,7 +112,8 @@ const Homepage = () => {
                 lineHeight: "1.4",
               }}
             >
-              {t("heroSubtitle")}
+              We build custom websites and automated systems that bring your business more bookings,
+              inquiries, and revenue — automatically.
             </p>
 
             <p
@@ -181,22 +125,23 @@ const Homepage = () => {
                 margin: "0 auto 3rem auto",
               }}
             >
-              {t("heroCostNote")}{" "}
-              <strong style={{ color: "var(--primary)" }}>₹5,000</strong>. {t("statGuaranteetitle")}.
+              Outcome-first local solutions starting from{" "}
+              <strong style={{ color: "var(--primary)" }}>₹5,000</strong>. Supported by our 100%
+              refund guarantee.
             </p>
 
             {/* CTAs */}
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
               <a
-                href="https://wa.me/919079144245?text=Hi%20ZenLift%2C%20I%20want%20to%20get%20more%20leads%20and%20grow%20my%20local%20business."
+                href="https://wa.me/919999999999?text=Hi%20ZenLift%2C%20I%20want%20to%20get%20more%20leads%20and%20grow%20my%20local%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
               >
-                {t("whatsappInquiry")}
+                Inquire on WhatsApp
               </a>
               <a href="#solutions" className="btn btn-secondary">
-                {t("exploreSolutions")}
+                Explore Solutions
               </a>
             </div>
           </div>
@@ -207,47 +152,47 @@ const Homepage = () => {
       <div className="marquee-container">
         <div className="marquee-content">
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Instant Lead Response" : "इंस्टेंट लीड रिस्पांस"}
+            <span className="marquee-dot"></span>Instant Lead Response
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Smart FAQ Chatbots" : "स्मार्ट FAQ चैटबॉट्स"}
+            <span className="marquee-dot"></span>Smart FAQ Chatbots
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Automated Follow-ups" : "ऑटोमेटेड फॉलो-अप्स"}
+            <span className="marquee-dot"></span>Automated Follow-ups
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Local Maps Optimization" : "लोकल मैप्स ऑप्टिमाइज़ेशन"}
+            <span className="marquee-dot"></span>Local Maps Optimization
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Exclusive Lead Funnels" : "एक्सक्लूसिव लीड फनल्स"}
+            <span className="marquee-dot"></span>Exclusive Lead Funnels
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "WhatsApp API Integrations" : "WhatsApp API इंटीग्रेशन"}
+            <span className="marquee-dot"></span>WhatsApp API Integrations
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Performance Dashboards" : "परफॉरमेंस डैशबोर्ड्स"}
+            <span className="marquee-dot"></span>Performance Dashboards
           </div>
           {/* Repeat items for infinite scroll effect */}
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Instant Lead Response" : "इंस्टेंट लीड रिस्पांस"}
+            <span className="marquee-dot"></span>Instant Lead Response
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Smart FAQ Chatbots" : "स्मार्ट FAQ चैटबॉट्स"}
+            <span className="marquee-dot"></span>Smart FAQ Chatbots
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Automated Follow-ups" : "ऑटोमेटेड फॉलो-अप्स"}
+            <span className="marquee-dot"></span>Automated Follow-ups
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Local Maps Optimization" : "लोकल मैप्स ऑप्टिमाइज़ेशन"}
+            <span className="marquee-dot"></span>Local Maps Optimization
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Exclusive Lead Funnels" : "एक्सक्लूसिव लीड फनल्स"}
+            <span className="marquee-dot"></span>Exclusive Lead Funnels
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "WhatsApp API Integrations" : "WhatsApp API इंटीग्रेशन"}
+            <span className="marquee-dot"></span>WhatsApp API Integrations
           </div>
           <div className="marquee-item">
-            <span className="marquee-dot"></span>{language === "en" ? "Performance Dashboards" : "परफॉरमेंस डैशबोर्ड्स"}
+            <span className="marquee-dot"></span>Performance Dashboards
           </div>
         </div>
       </div>
@@ -264,15 +209,19 @@ const Homepage = () => {
             }}
           >
             <div>
-              <span className="tagline">{t("philosophyTag")}</span>
+              <span className="tagline">Our Philosophy</span>
               <h2 style={{ fontSize: "2.5rem", marginTop: "0.5rem", marginBottom: "1.5rem" }}>
-                {t("philosophyTitle")}
+                Technology should work FOR your business, not complicate it.
               </h2>
               <p style={{ color: "var(--text-secondary)", marginBottom: "1.5rem" }}>
-                {t("philosophyText1")}
+                Most agencies want to sell you complicated retainer contracts or code apps you don't
+                need. We do the opposite. We find the smallest, highest-impact leak in your digital
+                front door and patch it first.
               </p>
               <p style={{ color: "var(--text-secondary)" }}>
-                {t("philosophyText2")}
+                Whether it is a dentist clinic losing referrals because of a broken map listing, or a
+                coaching institute losing student enrollments during demo class rushes, we build the
+                exact automation that recovers that revenue.
               </p>
             </div>
 
@@ -282,14 +231,14 @@ const Homepage = () => {
                 style={{ padding: "2rem", textAlign: "center", background: "rgba(255,255,255,0.01)" }}
               >
                 <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>5</div>
-                <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>{t("statNichestitle")}</div>
+                <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>Target Industries</div>
               </div>
               <div
                 className="glass-card"
                 style={{ padding: "2rem", textAlign: "center", background: "rgba(255,255,255,0.01)" }}
               >
                 <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "var(--primary)" }}>50+</div>
-                <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>{t("statConsultedtitle")}</div>
+                <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>Businesses Consulted</div>
               </div>
               <div
                 className="glass-card"
@@ -301,8 +250,8 @@ const Homepage = () => {
                   borderColor: "rgba(240,123,0,0.2)",
                 }}
               >
-                <div style={{ fontSize: "2.2rem", fontWeight: "800", color: "var(--text-primary)" }}>100%</div>
-                <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>{t("statGuaranteetitle")}</div>
+                <div style={{ fontSize: "2.2rem", fontWeight: "800", color: "#FFF" }}>100%</div>
+                <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>Refund Guarantee Policy</div>
               </div>
             </div>
           </div>
@@ -310,15 +259,16 @@ const Homepage = () => {
       </section>
 
       {/* 4. Niche Selector Grid */}
-      <section className="section" id="solutions" style={{ background: "var(--section-bg)" }}>
+      <section className="section" id="solutions" style={{ background: "rgba(10, 10, 10, 0.3)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <span className="tagline">{t("nicheSelectorTag")}</span>
+            <span className="tagline">Solutions Tailored for You</span>
             <h2 style={{ fontSize: "2.5rem", marginTop: "0.5rem", marginBottom: "1rem" }}>
-              {t("nicheSelectorTitle")}
+              What niche is your business?
             </h2>
             <p style={{ color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto" }}>
-              {t("nicheSelectorSubtitle")}
+              Click on your industry to see exactly how our custom websites and automated chatbots
+              can streamline your customer acquisition.
             </p>
           </div>
 
@@ -348,20 +298,19 @@ const Homepage = () => {
           <div
             className="glass-card"
             style={{
-              padding: "4rem 3rem",
-              background: "var(--card-bg)",
-              borderColor: "var(--border-color)",
-              boxShadow: "0 15px 40px rgba(0, 0, 0, 0.15), 0 0 35px var(--primary-glow)",
+              padding: "4rem",
+              background: "linear-gradient(135deg, rgba(8, 8, 8, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%)",
+              borderColor: "rgba(255, 255, 255, 0.08)",
               textAlign: "center",
               maxWidth: "900px",
               margin: "0 auto",
             }}
           >
             <span className="tagline" style={{ color: "var(--accent-gold)" }}>
-              {t("dontDoTag")}
+              Differentiator
             </span>
             <h2 style={{ fontSize: "2.8rem", marginTop: "0.5rem", marginBottom: "2rem" }}>
-              {t("dontDoTitle")} <span className="serif-font" style={{ color: "var(--primary)" }}>{t("dontDoNot")}</span> {t("dontDoDo")}
+              What We Do <span className="serif-font" style={{ color: "var(--primary)" }}>Not</span> Do.
             </h2>
             <div
               style={{
@@ -374,26 +323,29 @@ const Homepage = () => {
             >
               <div>
                 <h4 style={{ color: "var(--primary)", fontSize: "1.1rem", marginBottom: "0.5rem" }}>
-                  {t("dontDoTitle1")}
+                  ✕ No Generic Templates
                 </h4>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-                  {t("dontDoDesc1")}
+                  We don't copy-paste generic layouts. Every clinic, tuition, or broker layout is written
+                  with niche-tailored copies that actually convert.
                 </p>
               </div>
               <div>
                 <h4 style={{ color: "var(--primary)", fontSize: "1.1rem", marginBottom: "0.5rem" }}>
-                  {t("dontDoTitle2")}
+                  ✕ No Retainer Lock-ins
                 </h4>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-                  {t("dontDoDesc2")}
+                  We don't force you into long monthly fees. Our websites and chatbot setups are 100%
+                  one-time setups. Retainers are entirely optional.
                 </p>
               </div>
               <div>
                 <h4 style={{ color: "var(--primary)", fontSize: "1.1rem", marginBottom: "0.5rem" }}>
-                  {t("dontDoTitle3")}
+                  ✕ No Disappearing Acts
                 </h4>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-                  {t("dontDoDesc3")}
+                  We don't launch your site and disappear. Every client gets 30 days of free support and a
+                  shared Google lead-tracker sheet.
                 </p>
               </div>
             </div>
@@ -402,15 +354,16 @@ const Homepage = () => {
       </section>
 
       {/* 6. Products Preview Section */}
-      <section className="section" style={{ background: "var(--section-bg)" }}>
+      <section className="section" style={{ background: "rgba(10, 10, 10, 0.4)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <span className="tagline">{t("saasTag")}</span>
+            <span className="tagline">Upcoming SaaS Products</span>
             <h2 style={{ fontSize: "2.5rem", marginTop: "0.5rem", marginBottom: "1rem" }}>
-              {t("saasTitle")}
+              Softwares that power businesses
             </h2>
             <p style={{ color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto" }}>
-              {t("saasSubtitle")}
+              We build specialized, lightweight software products from the repeated automation needs of
+              our local business clients.
             </p>
           </div>
 
@@ -429,7 +382,7 @@ const Homepage = () => {
 
           <div style={{ textAlign: "center", marginTop: "3rem" }}>
             <Link href="/products" className="btn btn-secondary">
-              {t("viewSuite")}
+              View Complete Product Suite
             </Link>
           </div>
         </div>
@@ -441,10 +394,10 @@ const Homepage = () => {
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <span className="tagline">FAQ</span>
             <h2 style={{ fontSize: "2.5rem", marginTop: "0.5rem", marginBottom: "1rem" }}>
-              {t("faqTitle")}
+              Frequently Asked Questions
             </h2>
             <p style={{ color: "var(--text-secondary)", maxWidth: "500px", margin: "0 auto" }}>
-              {t("faqSubtitle")}
+              Have questions about our setups, guarantee, or timeline? We've got you covered.
             </p>
           </div>
 

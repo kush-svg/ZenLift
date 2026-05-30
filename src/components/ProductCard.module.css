@@ -1,0 +1,138 @@
+/* ProductCard CSS Module */
+
+.card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card:hover {
+  background: var(--card-hover-bg);
+  border-color: rgba(240, 123, 0, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px var(--primary-glow);
+}
+
+.featured {
+  background: radial-gradient(circle at top right, rgba(240, 123, 0, 0.08) 0%, var(--card-bg) 100%);
+  border-color: rgba(240, 123, 0, 0.5);
+  grid-column: span 2;
+}
+
+@media (max-width: 992px) {
+  .featured {
+    grid-column: span 1;
+  }
+}
+
+.badgeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.productBadge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.activeBadge {
+  background: var(--primary-glow);
+  color: var(--primary);
+  border: 1px solid rgba(240, 123, 0, 0.3);
+}
+
+.soonBadge {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent-gold);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.header {
+  margin-bottom: 1.8rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+  font-family: var(--font-display);
+}
+
+.featured .title {
+  font-size: 2.2rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.featuresList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.featured .featuresList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 576px) {
+  .featured .featuresList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.featureCheck {
+  color: var(--primary);
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.soonCheck {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.actions a, .actions button {
+  flex: 1;
+}

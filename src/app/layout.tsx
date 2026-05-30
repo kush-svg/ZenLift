@@ -1,27 +1,39 @@
-import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
+import React from "react";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import JsonLd from "@/components/JsonLd";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
-const headingFont = Plus_Jakarta_Sans({
+import { LanguageProvider } from "@/components/LanguageContext";
+import LanguageModal from "@/components/LanguageModal";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  variable: "--font-heading",
 });
 
-const bodyFont = DM_Sans({
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
-  variable: "--font-body",
 });
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata = {
-  title: "ZenLift | We Help Businesses Grow Digitally",
-  description: "We build high-converting websites, digital systems, and automation tools tailored for Indian SMEs and modern startups.",
+  title: "ZenLift | AI-Powered Web Systems & Automation for Local Businesses",
+  description: "We build high-converting websites, smart inquiry chatbots, and automated follow-ups that double revenue for local businesses in Delhi NCR & Faridabad.",
   metadataBase: new URL("https://zenlift.in"), // Crucial for Vercel relative pathing
+  robots: "index, follow",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
-    title: "ZenLift | We Help Businesses Grow Digitally",
-    description: "High-converting websites and automation tools for Indian startups.",
+    title: "ZenLift | AI-Powered Web Systems & Automation for Local Businesses",
+    description: "We build high-converting websites, smart inquiry chatbots, and automated follow-ups that double revenue for local businesses.",
     url: "https://zenlift.in",
     siteName: "ZenLift",
     images: [
@@ -37,20 +49,35 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${headingFont.variable} ${bodyFont.variable} font-body antialiased`}
-      >
-        <JsonLd />
-        <Navbar />
-        {children}
-        <Footer />
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        />
+      </head>
+      <body>
+        <LanguageProvider>
+          {/* Branded Slow-Motion Persistent Background */}
+          <div className="pixel-grid-bg"></div>
+          <div className="pixel-grid-overlay"></div>
+          <div className="logo-particle-container">
+            <div className="logo-particle logo-particle-1"></div>
+            <div className="logo-particle logo-particle-2"></div>
+            <div className="logo-particle logo-particle-3"></div>
+            <div className="logo-particle logo-particle-4"></div>
+          </div>
+
+          <Navbar />
+          <main style={{ minHeight: "calc(100vh - 80px)", paddingTop: "80px" }}>
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppButton />
+          <LanguageModal />
+        </LanguageProvider>
       </body>
     </html>
   );

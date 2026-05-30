@@ -8,6 +8,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { LanguageProvider } from "@/components/LanguageContext";
 import LanguageModal from "@/components/LanguageModal";
 import DotCorridorBg from "@/components/DotCorridorBg";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,6 +75,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <WhatsAppButton />
           <LanguageModal />
+          <Analytics />
+          <SpeedInsights />
         </LanguageProvider>
       </body>
     </html>

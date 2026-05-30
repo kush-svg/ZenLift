@@ -7,6 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 import { LanguageProvider } from "@/components/LanguageContext";
 import LanguageModal from "@/components/LanguageModal";
+import DotCorridorBg from "@/components/DotCorridorBg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,16 +53,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        />
-      </head>
+      <head />
       <body>
         <LanguageProvider>
           {/* Branded Slow-Motion Persistent Background */}
-          <div className="pixel-grid-bg"></div>
+          <DotCorridorBg />
           <div className="pixel-grid-overlay"></div>
           <div className="logo-particle-container">
             <div className="logo-particle logo-particle-1"></div>

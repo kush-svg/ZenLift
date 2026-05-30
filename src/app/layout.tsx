@@ -15,13 +15,26 @@ const bodyFont = DM_Sans({
   variable: "--font-body",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "ZenLift | We Help Businesses Grow Digitally",
-  description: "Web Development, Business Automation, Social Media Management for SMEs and Startups.",
+  description: "We build high-converting websites, digital systems, and automation tools tailored for Indian SMEs and modern startups.",
+  metadataBase: new URL("https://zenlift.in"), // Crucial for Vercel relative pathing
   openGraph: {
     title: "ZenLift | We Help Businesses Grow Digitally",
-    description: "Built for Indian SMEs and startups.",
-  }
+    description: "High-converting websites and automation tools for Indian startups.",
+    url: "https://zenlift.in",
+    siteName: "ZenLift",
+    images: [
+      {
+        url: "https://kommodo.ai/i/vanhD6ImBiIdtLfQGYXa",
+        width: 1200,
+        height: 630,
+        alt: "ZenLift Digital Agency",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

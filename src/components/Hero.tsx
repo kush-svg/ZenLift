@@ -55,13 +55,17 @@ export default function Hero() {
             className="flex items-center gap-2 bg-zen-orange text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-orange-600 transition-all hover:scale-105 shadow-lg shadow-zen-orange/30 w-full sm:w-auto justify-center"
           >
             <MessageCircle size={20} />
-            Start a Project
+            <span>Start a Project</span>
           </Link>
+
+          {/* 🌟 CRITICAL SEO FIX: Prevents text from bundling as "Start a ProjectSee Our Work" */}
+          <span className="sr-only"> content separator </span>
+
           <Link
             href="#work"
             className="flex items-center gap-2 bg-white text-zen-navy border border-gray-200 px-8 py-4 rounded-full font-medium text-lg hover:border-zen-navy transition-all hover:scale-105 w-full sm:w-auto justify-center"
           >
-            See Our Work
+            <span>See Our Work</span>
             <ArrowRight size={20} />
           </Link>
         </motion.div>
